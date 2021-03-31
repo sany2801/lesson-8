@@ -1,0 +1,52 @@
+*{
+  margin: 10px;  
+}
+.circle{
+    background: blue;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    animation: pulsing 2s infinite;
+}
+@keyframes pulsing{
+   0%{
+       transform: scale(0.5, 0.5);
+    }
+    50%{
+        transform:scale(1, 1);
+        background: red;
+        border-radius: 0;
+    }
+    60%{
+        transform:scale(2, 1);
+        background: red;
+        border-radius: 0;
+    }
+    70%{
+        transform:scale(1, 2);
+        background: red;
+        border-radius: 0;
+    }
+    100%{
+        transform: scale(0.5, 0.5)
+    }
+
+
+}
+.perspective-card{
+    width: 200px;
+    height: 300px;
+    margin: 6rem;
+    background-color: burlywood;
+    border: 3px solid rebeccapurple;
+    position: relative;
+    cursor: pointer;
+}
+
+.left:hover{
+    transform: rotateY(20deg);
+    transform: perspective(250px) rotateY(20deg);
+}
+.right:hover{
+    transform: perspective(250px) rotateY(-20deg);
+}
